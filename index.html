@@ -1,0 +1,140 @@
+<DOCTYPE html>
+    <html>
+
+    <head>
+        <title>Basic JavaScript Demo</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+            crossorigin="anonymous">
+    </head>
+
+    <body>
+
+        <!--<div id="box" onload="change_color()"></div>-->
+        <div id="menu">
+            <label><h1>Pizza Menu</h1></label>
+            <form>
+                <label><h5>Please Select a Size</h5></label>
+                <div>
+                    <input type="radio" name="size" class="size" value="Personal Pizza">Personal
+                    <br>
+                    <input type="radio" name="size" class="size" value="Medium Pizza" checked>Medium
+                    <br>
+                    <input type="radio" name="size" class="size" value="Large Pizza">Large
+                    <br>
+                    <input type="radio" name="size" class="size" value="Extra Large Pizza">Extra Large
+                    <br>
+                </div>
+                <br>
+                <label><h5>Meat Options</h5></label>
+                <div>
+                    <input type="checkbox" name="meat" class="meat" value="Pepperoni">Pepperoni
+                    <br>
+                    <input type="checkbox" name="meat" class="meat" value="Sausage">Sausage
+                    <br>
+                    <input type="checkbox" name="meat" class="meat" value="Canadian Bacon">Canadian Bacon
+                    <br>
+                    <input type="checkbox" name="meat" class="meat" value="Ground Beef">Ground Beef
+                    <br>
+                    <input type="checkbox" name="meat" class="meat" value="Anchovy">Anchovy
+                    <br>
+                    <input type="checkbox" name="meat" class="meat" value="Chicken">Chicken
+                    <br>
+                </div>
+                <br>
+                <label><h5>Cheese Options</h5></label>
+                <div>
+                    <input type="radio" name="cheese" value="Regular Cheese" checked>Regular
+                    <br>
+                    <input type="radio" name="cheese" value="No Cheese">No Cheese
+                    <br>
+                    <input type="radio" name="cheese" value="Extra Cheese">Extra Cheese
+                    <br>
+                </div>
+                <br>
+                <label><h5>Crust Options</h5></label>
+                <div>
+                    <input type="radio" name="crust" value="Plain Crust" checked>Plain Crust
+                    <br>
+                    <input type="radio" name="crust" value="Garlic Crust">Garlic Butter Crust
+                    <br>
+                    <input type="radio" name="crust" value="Cheese Stuffed Crust">Cheese Stuffed Crust
+                    <br>
+                    <input type="radio" name="crust" value="Spicy Crust">Spicy Crust
+                    <br>
+                    <input type="radio" name="crust" value="House Special Crust">House Special Crust
+                    <br>
+                </div>
+                <br>
+                <label><h5>Sauce Options</h5></label>
+                <div>
+                    <input type="radio" name="sauce" value="Marinara Sauce" checked>Marinara Sauce
+                    <br>
+                    <input type="radio" name="sauce" value="White Sauce">White Sauce
+                    <br>
+                    <input type="radio" name="sauce" value="Barbeque Sauce">Barbeque Sauce
+                    <br>
+                    <input type="radio" name="sauce" value="No Sauce">No Sauce
+                    <br>
+                </div>
+                <br>
+                <label><h5>Vegetarian Options</h5></label>
+                <div>
+                    <input type="checkbox" name="veg" value="Tomatoes">Tomatoes
+                    <br>
+                    <input type="checkbox" name="veg" value="Onions">Onions
+                    <br>
+                    <input type="checkbox" name="veg" value="Olives">Olives
+                    <br>
+                    <input type="checkbox" name="veg" value="Green Peppers">Green Peppers
+                    <br>
+                    <input type="checkbox" name="veg" value="Mushrooms">Mushrooms
+                    <br>
+                    <input type="checkbox" name="veg" value="Pineapple">Pineapple
+                    <br>
+                    <input type="checkbox" name="veg" value="Spinach">Spinach
+                    <br>
+                    <input type="checkbox" name="veg" value="Jalapeno">Jalapeno
+                    <br>
+                </div>
+            </form>
+            <button onclick="displayReceipt()">Order</button>
+        </div>
+
+        <div id="orderComplete" style="display:none">
+            <p>Order Receipt</p>
+            <div id="receipt">
+                <ul style="display:inline-block; list-style-type:none;">
+                    <li id="item1"></li>
+                    <li id="item2"></li>
+                    <li id="item3"></li>
+                    <li id="item4"></li>
+                    <li id="item5"></li>
+                    <li id="item6"></li>
+                    <li id="totalDisp"></li>
+                </ul>
+                <ul style="display: inline-block; list-style-type:none;">
+                    <li id="amt1">1</li>
+                    <li id="amt2">1</li>
+                    <li id="amt3">1</li>
+                    <li id="amt4">1</li>
+                    <li id="amt5">1</li>
+                    <li id="amt6">1</li>
+                    <li id="totalAmt">1</li>
+                </ul>
+            </div>
+            <button onclick="orderAgain()">Order More?</button>
+        </div>
+
+        <script type="text/javascript" src="./js/finalProj.js"></script>
+        <!-- jQuery, Tether, Bootstrap JS. -->
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+            crossorigin="anonymous"></script>
+    </body>
+
+    </html>
