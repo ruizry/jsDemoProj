@@ -1,9 +1,8 @@
-// define the variables
-
-// document.getElementById('body') = the <body id="body"> on the html
+//Major Sections of the Page
 var menu = document.getElementById('menu');
 var orderComplete = document.getElementById('orderComplete');
 
+//List of names of what was ordered
 var sizeSel = document.getElementById('item1');
 var meatSel = document.getElementById('item2');
 var cheeseSel = document.getElementById('item3');
@@ -12,6 +11,7 @@ var sauceSel = document.getElementById('item5');
 var vegSel = document.getElementById('item6');
 var totalDisp = document.getElementById('totalDisp');
 
+//List of values for each section of the receipt
 var sizeAmt = document.getElementById('amt1');
 var meatAmt = document.getElementById('amt2');
 var cheeseAmt = document.getElementById('amt3');
